@@ -1,6 +1,6 @@
 # Responsive Web Design Projects - Build a Product Landing Page
 
-[`Link to de website`](https://natcancein.github.io/FreeCodeCamp/ResponsiveWebDesignProjects/product-landing-page/)
+[`Link to website`](https://natcancein.github.io/FreeCodeCamp/ResponsiveWebDesignProjects/product-landing-page/)
 
 This is the third responsive web design project for free code camp.
 
