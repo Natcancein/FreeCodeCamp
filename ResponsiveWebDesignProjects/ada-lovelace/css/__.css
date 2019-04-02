@@ -1,0 +1,92 @@
+/* 
+  ##Dispositivo = Desktops
+  ##Pantalla = 1281px to higher resolution desktops
+
+
+@media (min-width: 1281px) {
+  
+  //CSS
+  
+}
+
+
+  ##Dispositivo = Laptops, Desktops
+  ##Pantalla = B/w 1025px to 1280px
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  //CSS
+  
+}
+
+*/
+/* 
+  ##Dispositivo = Tablets, Ipads (vertical)
+  ##Pantalla = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  //CSS
+
+  header{
+  height: 80px;
+}
+
+  body{
+    font-size:4vw;
+  }
+  
+  #intro{
+  height: 80px; 
+}
+
+#biography{
+
+}
+
+#biography .inside{
+
+
+  padding-top: 1vh;
+}
+
+}
+
+/* 
+  ##Dispositivo = Tablets, Ipads (landscape)
+  ##Pantalla = B/w 768px to 1024px
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  //CSS
+  
+}
+
+
+  ##Dispositivo = Low Resolution Tablets, Mobiles (Landscape)
+  ##Pantalla = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  //CSS
+
+  #biography .inside{
+    flex-direction: column;
+  }
+  
+}
+
+/* 
+  ##Dispositivo = Most of the Smartphones Mobiles (vertical)
+  ##Pantalla = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  //CSS
+  
+}

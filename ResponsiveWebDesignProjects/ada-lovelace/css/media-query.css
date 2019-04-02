@@ -1,0 +1,253 @@
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+#name-ada{
+  font-size: 5vw;
+}
+
+nav{
+  font-size: 3.5vw;
+  margin-right: 8vw;
+width: 60vw;
+}
+
+nav ul{
+  justify-content: space-between;
+}
+
+#tribute-info{
+ display: none;
+}
+
+
+#intro {
+ height: 40vh;
+} 
+
+#intro h1{
+   top:60%;
+font-size: 8vw; 
+} 
+
+#biography{
+padding-top: 20vh;
+padding-bottom: 20vh;
+}
+
+#biography h2, #work .text h2, #legacy h2{
+
+  font-size: 7vw;
+}
+
+#biography .inside{
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5vh;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#biography .inside img{
+  height: 66vw;
+}
+
+#biography .inside .text{
+  font-size: 4vw;
+  margin-left: 0;
+  padding-top: 2vh;
+  width: 80vw; 
+  
+}
+
+#work .text{
+ font-size: 4vw;
+  width: 80vw;
+
+}
+
+#legacy .inside {
+  flex-direction: column;
+  width: 80vw; 
+  font-size: 4vw;
+padding-top: 2vh;
+}
+
+#legacy .inside .left{
+  padding: 0vw;
+}
+
+#legacy .inside .right{
+  padding: 0vw;
+}
+
+#legacy .finally{
+   font-size: 4vw;
+   padding: 3vw;
+   width: 80vw; 
+   text-align: center;
+   margin:auto;
+}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+
+
+#name-ada{
+  font-size: 5vw;
+}
+
+nav{
+  font-size: 3.5vw;
+  margin-right: 8vw;
+width: 60vw;
+}
+
+nav ul{
+  justify-content: space-between;
+}
+
+#tribute-info{
+  height: 250px; 
+}
+
+#intro h1{
+   top:60%;
+font-size: 8vw; 
+} 
+
+#biography{
+padding-top: 20vh;
+padding-bottom: 20vh;
+}
+
+#biography h2, #work .text h2, #legacy h2{
+
+  font-size: 7vw;
+}
+
+#biography .inside{
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5vh;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#biography .inside img{
+  height: 66vw;
+}
+
+#biography .inside .text{
+  font-size: 3vw;
+  margin-left: 0;
+  padding-top: 2vh;
+  width: 80vw; 
+  
+}
+
+#work .text{
+ font-size: 3vw;
+  width: 80vw;
+
+}
+
+#legacy .inside {
+  flex-direction: column;
+  width: 80vw; 
+  font-size: 3vw;
+padding-top: 2vh;
+}
+
+#legacy .inside .left{
+  padding: 0vw;
+}
+
+#legacy .inside .right{
+  padding: 0vw;
+}
+
+#legacy .finally{
+   font-size: 3vw;
+   padding: 3vw;
+   width: 80vw; 
+   text-align: center;
+   margin:auto;
+}
+
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1080px){
+
+#name-ada{
+  font-size: 4vw;
+}
+
+nav{
+  font-size: 2.5vw;
+  margin-right: 8vw;
+width: 40vw;
+}
+
+nav ul{
+  justify-content: space-between;
+}
+
+
+#biography h2, #work .text h2, #legacy h2{
+
+  font-size: 5vw;
+}
+
+#biography .inside{
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5vh;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#biography .inside img{
+  height: 66vw;
+}
+
+#biography .inside .text{
+  font-size: 2vw;
+  margin-left: 0;
+  padding-top: 6vh;
+  width: 90vw; 
+  
+}
+
+#work .text{
+ font-size: 2vw;
+  width: 90vw;
+
+}
+
+#legacy .inside {
+  flex-direction: column;
+  width: 90vw; 
+  font-size: 2vw;
+padding-top: 2vh;
+}
+
+#legacy .inside .left{
+  padding: 0vw;
+}
+
+#legacy .inside .right{
+  padding: 0vw;
+}
+
+#legacy .finally{
+   font-size: 2vw;
+   padding: 3vw;
+   width: 90vw; 
+   text-align: center;
+   margin:auto;
+}
+} 
