@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Product Landing Page</title>
+	<!-- Etiquetas meta requeridas -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Hoja de estilo Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+
+</head>
+<body>
+<header id="header">
+	<nav class="navbar mi-nav navbar-expand-lg fixed-top" id="nav-bar">
+  <a class="navbar-brand" href="#"><img id="header-img" class="img-responsive" src="img/opticas-schilling.png" ></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarSupportedContent" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#videos">Video producto<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#oferta">Oferta del mes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#modelos">Modelos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#subscribete">Subscríbete</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+
+</header>
+
+
+<section id="videos">
+	
+		<div class="row justify-content-md-center">
+			<div class="col col-sm col-md col-lg col-xl">
+				<div class="embed-responsive embed-responsive-16by9 iframe">
+				 <iframe id="video" class="embed-responsive-item" src="https://www.youtube.com/embed/ZOy0YgUDwDg" allowfullscreen></iframe> </div>
+			</div>
+		</div>
+</section>
+
+<section id="oferta" class="container">
+	
+	<div class="row justify-content-md-center">
+			<div class="col col-sm col-md col-lg col-xl">
+				<h1>Ofertas del mes</h1>
+							</div>
+		</div>
+
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6 flex-fill"><img src="img/img-izq.jpg" class="img-fluid" alt="promocion">
+</div>
+    <div class="col-sm-12 col-md-6 flex-fill"><img src="img/img-der.jpg" class="img-fluid" alt="promocion">
+  </div>
+</div>
+
+</section>
+
+<section id="modelos" class="container">
+	
+		<div class="row justify-content-md-center">
+			<div class="col col-sm col-md col-lg col-xl">
+				<h1>modelos</h1>
+							</div>
+		</div>
+
+<div class="row">
+	<div class="col-sm-12 col-md-4">
+		<div class="card">
+  			<img class="card-img-top" src="img/lentes.jpeg" alt="Card image cap">
+  				<div class="card-body">
+  			<h5 class="card-title">ANTEOJOS DE SOL JACK J ITALIAN JI04 18 C1 L1</h5>
+    		<p class="card-text">$ 79.900 </p>
+  				</div>
+		</div>
+	</div>
+
+	<div class="col-sm-12 col-md-4">
+		<div class="card">
+  			<img class="card-img-top" src="img/lentes.jpeg" alt="Card image cap">
+  				<div class="card-body">
+  			<h5 class="card-title">ANTEOJOS DE SOL RAY BAN JUSTIN RB4165 NEGRO RUGOSO</h5>
+    		<p class="card-text">$ 89.900 </p>
+  				</div>
+		</div>
+	</div>
+
+		<div class="col-sm-12 col-md-4">
+		<div class="card">
+  			<img class="card-img-top" src="img/lentes.jpeg" alt="Card image cap">
+  				<div class="card-body">
+  			<h5 class="card-title">ANTEOJOS DE SOL JACK J.DESIGN JD/S01-19 C.2 L.2</h5>
+    		<p class="card-text">$ 98.900 </p>
+  				</div>
+		</div>
+	</div>
+
+</div>
+
+
+</section>
+
+<section id="subscribete" class="container jumbotron">
+	<div class="row justify-content-md-center ">
+			<div class="col col-sm col-md col-lg col-xl">
+				<h1 class="display-4">Subscríbete a nuestro mailing!</h1>
+							</div>
+		</div>
+				<form id="form" class="form-group row" action="https://www.freecodecamp.com/email-submit">
+					<div class="col-12">
+							<div class="row justify-content-md-center ">
+
+					<label class="lead mail" > Ingresa tu mail para mantenerte al tanto de nuestras ofertas</label>
+     				</div>
+     				<input id="email" class="form-control" type="email" name="email" placeholder="nombre@mail.cl" required=""></input>
+					</div>
+					
+					 <input id="submit" type="submit" value="Subscribete" class="btn btn-secondary btn-lg btn-block"></input>
+
+				</form>
+
+
+</section>
+<!-- JavaScript opcional -->
+	<!-- Primero jQuery, luego Popper.js, luego Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+	<!-- Script adicional -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

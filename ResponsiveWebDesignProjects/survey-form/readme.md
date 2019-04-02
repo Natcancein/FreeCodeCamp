@@ -1,6 +1,6 @@
 # Responsive Web Design Projects - Build a Survey Form
 
-[`Link to de website`](https://natcancein.github.io/FreeCodeCamp/ResponsiveWebDesignProjects/survey-form/)
+[`Link to de website`](https://natcancein.github.io/FreeCodeCamp/ResponsiveWebDesignProjects/survey-form/index.html)
 
 
 This is the second responsive web design project for free code camp.

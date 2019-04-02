@@ -6,4 +6,8 @@
 
 ## Build a Survey Form
 
-[`Link to Survey Form website`](https://natcancein.github.io/FreeCodeCamp/ResponsiveWebDesignProjects/survey-form/)
+[`Link to Survey Form website`](https://natcancein.github.io/FreeCodeCamp/ResponsiveWebDesignProjects/survey-form/index.html)
+
+##Build a Product Landing Page
+
+[`Link to de website`](https://natcancein.github.io/FreeCodeCamp/ResponsiveWebDesignProjects/product-landing-page/)
