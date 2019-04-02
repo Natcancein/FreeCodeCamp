@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Survey form example">
+	<meta name="keywords" content="HTML,CSS">
+ 	<meta name="author" content="Natalia Cancino Rojas">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Survey Form about programming</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/media-queries.css">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+</head>
+<body>
+	<div class=".container">
+	<img src="img/learning-code.jpg" alt="learning-code">	</div>
+	<h1 id="title">How much do you know about programming?</h1>
+	<p id="description">This survey form is to know your level of knowledge in programming. With your answers, you can know if you are a <i>"beginner"</i>, a "middle student" or an "advanced student".</p>
+
+	<div id="container">
+		<form id="survey-form">
+			<div>
+      			<div class="label">
+       			 <label id="name-label" for="name"> Name: </label>
+      			</div>
+      			<div class="right">
+        		<input type="text" name="name" id="name" class="field" placeholder="Enter your name" required>
+      			</div>
+   			 </div>
+
+			<div>
+				<div class="label">
+				<label id="email-label" for="email">E-mail: </label>
+				</div>
+				<div class="right">
+				<input id="email" class="field" type="email" name="email" required placeholder="Enter your Email">
+				</div>
+			</div>
+
+			<div>
+				<div class="label">
+				<label id="number-label" for="age">Age: </label>
+				</div>
+				<div class="right">
+					<input id="number" class="field" type="number" name="age" min="1" max="100" required placeholder="Enter your age">
+				</div>
+			</div>	
+
+			<div>
+				<div class="label">
+			<label id="situation-label" for="situation">Current situation: </label> </div>
+				<div class="right">
+					<select id="dropdown" name="currentPos" class="dropdown">
+      			<option disabled value>Select an option</option>
+      			<option  value="student">Student</option>
+      			<option value="job">Full Time Job</option>
+      			<option value="learner">Full Time Learner</option>
+      			<option value="other">Other</option>
+    			</select>
+    			</div>
+			</div>	
+			
+			<div>
+				<div class="label">
+			<label class="label2">Select your level of knowledge: </label> </div>
+			<div class="right">
+				<ul class="radio"> 
+    						<li><input type="radio" name="radio-buttons" value="beginner" /><label for="radio-buttons1">Beginner</label></li> 
+    						<li><input type="radio" name="radio-buttons" value="Intermediate-student" /><label for="radio-buttons2">Intermediate student</label></li> 
+    						<li><input type="radio" name="radio-buttons" value="advanced-student" /><label for="radio-buttons3">Advanced student</label></li> 
+   							 <li><input type="radio" name="radio-buttons" value="expert" /><label for="radio-buttons4">Expert</label></li> 
+ 						 </ul> 
+ 				</div>	
+			</div>
+				
+			<div>
+				<div class="label">	 
+  			<label class="label2">Select the themes that you master: </label></div>
+  			<div class="right">
+  			 <ul>
+					  <li><input type="checkbox" name="html" value="1">HTML</input></li>
+				      <li><input type="checkbox" name="css" value="2">CSS</input></li>
+				      <li><input type="checkbox" name="javascript" value="1">Javascript</input></li>
+				      <li><input type="checkbox" name="react" value="1">React</input></li>
+				      <li><input type="checkbox" name="Bootstrap" value="1">Bootstrap</input></li>
+				      <li><input type="checkbox" name="node" value="1">Node</input></li>
+					 </ul>
+			
+			</div>	
+			</div>
+
+				<div>
+				<div class="label">	
+			<label for="comments">Aditional comments?</label></div>
+			<div class="right">
+			<textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+			
+				</div>	
+			</div>
+				<button id="submit" type="submit">Submit</button>
+		</form>
+	</div>
+</body>
+</html>

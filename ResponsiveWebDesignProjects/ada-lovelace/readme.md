@@ -1,6 +1,6 @@
 # Responsive Web Design Projects - Build a Tribute Page
 
-[`Link to de website`](https://natcancein.github.io/ada-lovelace/)
+[`Link to de website`](https://natcancein.github.io/FreeCodeCamp/ResponsiveWebDesignProjects/ada-lovelace/)
 
 
 This is the first responsive web design project for free code camp.
