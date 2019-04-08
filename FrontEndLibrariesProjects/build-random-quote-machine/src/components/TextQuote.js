@@ -9,7 +9,7 @@ class TextQuote extends React.Component {
     }
   }
 
-  componentDidMount() {
+/*   componentDidMount() {
      
     fetch('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1')
     .then(response => {
@@ -23,7 +23,7 @@ class TextQuote extends React.Component {
       this.setState({ content: data[0].content })
     }).catch(error => console.log('error is', error));
 
-  }
+  } */
 
   render() {
     const regex = /(<([^>]+)>)/ig;
