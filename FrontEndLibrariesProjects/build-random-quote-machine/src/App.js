@@ -1,85 +1,107 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
-import Grid from '@material-ui/core/Grid'
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import Grid from "@material-ui/core/Grid";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
 
-
-import twitter from './img/twitter.svg';
-import CardActions from '@material-ui/core/CardActions';
-import Button from '@material-ui/core/Button';
-
-import TextQuote from './components/TextQuote.js'
-import Footer from './components/Footer.js'
+import Footer from "./components/Footer.js";
+import CardContentQuote from "./components/CardContentQuote";
+import CardActionsQuote from "./components/CardActionsQuote";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       appStyle: {
-        backgroundColor: "salmon"
-      }
+        backgroundColor: "salmon",
+      },
+      appStyleText: {
+        color:"salmon"
+      },
+
+      quote: "Offend nobody, design for somebody.",
+      author: "PAUL BOAG"
     };
 
     this.changeColor = this.changeColor.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-  
-  changeColor(){
+
+  componentDidMount() {
+    this.handleClick();
+  }
+
+  handleClick = event => {
+    //event.preventDefault(); // May or may not be necessary depending on what you are doing
+
+    let number = (Math.floor(Math.random() * 25));
     
-    let newStyle = { ...this.state.appStyle, backgroundColor: '#' + parseInt(Math.random() * 0xffffff).toString(16) };
-    this.setState({ appStyle: newStyle })
+    const endpoint = `http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=25`;
+    fetch(endpoint)
+      .then(response => response.json())
+      .then(data => {
+        // Do stuff with data and then call this.setState();
+      console.log(data);
+      const quotesData = data[number];
+      const regex = /^<p>|[</p>]/ig;
+      const regex2 = /&#8217;|&#8217;/ig;
+      const com = /&#8220;|&#8221;/ig;
+      const apos = /&#8217;/ig;
+      const cleanQuote = quotesData.content.replace(regex, '').replace(regex2,"'" ).replace(com,"\"" );
+      const cleanAuthor = quotesData.title.replace(apos, '’');
+      this.setState({ quote: cleanQuote, author: cleanAuthor });
+      })
+      .catch(error => console.log("error is", error));
+  };
+
+  changeColor() {
+    const randomColor= parseInt(Math.random() * 0xffffff).toString(16);
+
+    let newStyle = {
+      ...this.state.appStyle,
+      backgroundColor: "#" + randomColor
+    };
+
+    let newStyleText = {
+      ...this.state.appStyle,
+      color: "#" + randomColor,
+      backgroundColor:"white"
+    };
+
+    this.setState({ appStyle: newStyle, appStyleText: newStyleText});
     console.log(newStyle);
   }
 
-  func2(){
-
-    console.log("funcion 2");
-  }
-
   render() {
-
     return (
       <div className="App" style={this.state.appStyle}>
-
         <Grid
           container
           direction="column"
           justify="center"
           alignItems="center"
-          style={{ minHeight: '100vh' }}
-        >  <div id="quote-box">
-
+          style={{ minHeight: "100vh" }}>
+          {" "}
+          <div id="quote-box">
             <Card>
-              <CardActionArea>
-
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2" id="text">
-                    <TextQuote />
-                  </Typography>
-                  <Typography component="p" id="author" align="right">
-                    author
-      </Typography>
-                </CardContent>
-                <CardActions className="btns">
-                  <Button size="small" color="primary">
-                    <a href="https://twitter.com/intent/tweet" id="tweet-quote" title="Tweet this quote!" target="_blank" rel="noopener noreferrer">
-                      <img src={twitter} alt="Logo" />
-                    </a>
-                  </Button>
-                  <Button id="new-quote" onClick={() => { this.changeColor(); this.func2();}}>New quote</Button>
-
-                </CardActions>
+              <CardActionArea >
+                <CardContentQuote style={this.state.appStyleText}
+                  quote={this.state.quote}
+                  author={this.state.author}
+                />
+                <CardActionsQuote
+                  btn={() => {
+                    this.changeColor();
+                    this.handleClick();
+                  }}
+                />
               </CardActionArea>
-
             </Card>
           </div>
-
+          
           <Footer />
         </Grid>
-  
       </div>
     );
   }
