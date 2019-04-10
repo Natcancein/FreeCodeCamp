@@ -91,6 +91,8 @@ class App extends Component {
                   author={this.state.author}
                 />
                 <CardActionsQuote
+                   quote={this.state.quote}
+                   author={this.state.author}
                   btn={() => {
                     this.changeColor();
                     this.handleClick();
