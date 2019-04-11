@@ -1,6 +1,5 @@
 {
   "name": "build-random-quote-machine",
-  "homepage": "https://natcancein.github.io/FreeCodeCamp/FrontEndLibrariesProjects/build-random-quote-machine/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
