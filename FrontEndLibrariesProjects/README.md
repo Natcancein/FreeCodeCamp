@@ -2,4 +2,4 @@
 
 ## Build a Random Quote Machine
 
-[`Link to Random Quote Machine`](https://natcancein.github.io/FreeCodeCamp/FrontEndLibrariesProjects/build-random-quote-machine/)
+[`Link to Random Quote Machine using React`](https://github.com/Natcancein/FreeCodeCamp/tree/master/FrontEndLibrariesProjects/build-random-quote-machine)
