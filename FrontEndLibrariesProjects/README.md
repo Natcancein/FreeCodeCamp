@@ -2,4 +2,4 @@
 
 ## Build a Random Quote Machine
 
-[`Link to Tribute Page`](https://natcancein.github.io/FreeCodeCamp/FrontEndLibrariesProjects/build-random-quote-machine/)
+[`Link to Random Quote Machine`](https://natcancein.github.io/FreeCodeCamp/FrontEndLibrariesProjects/build-random-quote-machine/)
