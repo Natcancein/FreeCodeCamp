@@ -1,5 +1,10 @@
-.App {
+.Fondo {
+  background: #61dafb;
+}
+.Titulos {
   text-align: center;
+  color:white;
+  text-transform: uppercase;
 }
 
 .App-logo {
