@@ -1,18 +1,24 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form';
+import Card from 'react-bootstrap/Card'
 import '../App.css';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import Previewer from './Previewer';
 
-const Previewer = () => (
-  
-        <Form>
-  <Form.Group controlId="formBasicEmail">
-    <Form.Label className="Titulos">Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
-    
-  </Form.Group>
+const Previewer = (props) => (
 
-  
-</Form>
+   <Card>
+   <Card.Body>
+     <Card.Title>Card Title</Card.Title>
+     <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+     <Card.Text>
+     {props.text} 
+     </Card.Text>
+     <Card.Link href="#">Card Link</Card.Link>
+     <Card.Link href="#">Another Link</Card.Link>
+   </Card.Body>
+ </Card>
+
+   
     
 );
 

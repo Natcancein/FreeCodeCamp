@@ -6,11 +6,17 @@ import '../App.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Editor = () => (
+const Editor = (props) => (
     <Form>
     <Form.Group controlId="exampleForm.ControlTextarea1">
     <Form.Label className="Titulos" >  <FontAwesomeIcon icon="stroopwafel" /> Editor</Form.Label>
-    <Form.Control as="textarea" rows="3" />
+    <Form.Control 
+    componentClass="textarea"
+    placeholder="wherever"
+    rows="3"
+    value={props.value}
+    onChange={props.onChange} >
+    </Form.Control>
     </Form.Group>
     </Form>
 );
