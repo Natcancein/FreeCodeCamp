@@ -6,17 +6,24 @@ import '../App.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+// Adding Font Awwesome
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
+
+
+library.add(faEdit);
+
 const Editor = (props) => (
-    <Form>
-    <Form.Group controlId="exampleForm.ControlTextarea1">
+    <Form >
+    <Form.Group >
     <Form.Label className="Titulos" >  
     <FontAwesomeIcon icon="edit" /> Editor</Form.Label>
     <Form.Control 
-    componentClass="textarea"
-    placeholder="wherever"
-    rows="3"
+    as="textarea" rows="15"
+    placeholder="Write whatever you want..."
     value={props.value}
-    onChange={props.onChange} >
+    onChange={props.onChange} 
+    >
     </Form.Control>
     </Form.Group>
     </Form>

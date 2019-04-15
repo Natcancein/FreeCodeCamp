@@ -1,63 +1,71 @@
-import React, { Component } from 'react';
-import './App.css';
-import Editor from "./components/Editor.js"
-import Previewer from './components/Previewer';
+import React, { Component } from "react";
+import "./App.css";
+import Editor from "./components/Editor";
+import placeHolderText from './components/placeHolderText' 
 
 // Adding Font Bootstrap-React
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-//Adding font awesome
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 // Adding Font Awwesome
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
-
-
-library.add(faEdit)
 library.add(faEye)
+
+
+// Adding Mark Library
+const marked= require("marked");
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ''
-    }
+      markDown:  placeHolderText
+    };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(event) {
     this.setState({
-      value: event.target.value
+      markDown: event.target.value
     });
-  }
+  };
 
+  
   render() {
+    const { markDown} = this.state;
+    //const newText = marked(markDown);
+ 
     return (
-      <div className="Fondo"> 
-      <Container>
-        <Row style={{
-          display: "flex",
-          alignItems: "center", 
-          height: "100vh"
-        }}>
-          <Col>
-            <Editor value={this.state.value}
-              onChange={this.handleChange} />
-          </Col>
-          <Col>
-          <Row>
-           <FontAwesomeIcon icon="eye" />
-            <h2 className="Titulos" >Previewer</h2> </Row>
-            <Previewer text={this.state.value} /> 
-          </Col>
-        </Row>
-      </Container>
-      </div>
 
+      <div className="Fondo">
+        <Container>
+          <h1 className="Titulo">Markdown Previewer</h1>
+
+          <Row
+            style={{
+              display: "flex",
+              alignItems: "center",
+              height: "80vh",
+              transform: "translateY(-50px)"
+            }}>
+            <Col>
+              <Editor value={markDown} onChange={this.handleChange} />
+            </Col>
+            <Col>
+            <h2 className="Titulos" ><span><FontAwesomeIcon icon="eye" /></span> Previewer</h2>
+            <div className="Previewer"> 
+              <div dangerouslySetInnerHTML={{ __html:  marked(markDown)}} /></div>
+            
+            </Col>
+          </Row>
+          <a className="Footer" href="https://github.com/Natcancein">
+            Created by Natcancein
+          </a>
+        </Container>
+      </div>
     );
   }
 }
