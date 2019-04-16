@@ -14,7 +14,7 @@ import { faEdit } from "@fortawesome/free-solid-svg-icons";
 library.add(faEdit);
 
 const Editor = (props) => (
-    <Form >
+    <Form id="Editor">
     <Form.Group >
     <Form.Label className="Titulos" >  
     <FontAwesomeIcon icon="edit" /> Editor</Form.Label>

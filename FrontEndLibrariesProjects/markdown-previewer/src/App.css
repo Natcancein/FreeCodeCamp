@@ -24,8 +24,8 @@
   color: black;
   text-align: left;
   background: white;
-  font-size: 10px;
-  overflow: hidden;
+  font-size: 11px;
+  overflow-y: scroll;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
