@@ -37,12 +37,12 @@ class App extends Component {
 
     let number = (Math.floor(Math.random() * 25));
     
-    const endpoint = `http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=25`;
+    const endpoint = `https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=25`;
     fetch(endpoint)
       .then(response => response.json())
       .then(data => {
         // Do stuff with data and then call this.setState();
-      console.log(data);
+     // console.log(data);
       const quotesData = data[number];
       const regex = /^<p>|[</p>]/ig;
       const regex2 = /&#8217;|&#8217;/ig;
