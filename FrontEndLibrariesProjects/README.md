@@ -10,4 +10,4 @@
 
 [`Link to Markdown previewer using React (production)`](https://github.com/Natcancein/FreeCodeCamp/tree/master/FrontEndLibrariesProjects/markdown-previewer)
 
-[`Link to Markdown previewer using React (published)`](hhttps://natcancein.github.io/markdown-previewer/)
+[`Link to Markdown previewer using React (published)`](https://natcancein.github.io/markdown-previewer/)
