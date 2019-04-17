@@ -34,23 +34,13 @@ class App extends Component {
 
   handleClick = event => {
     //event.preventDefault(); // May or may not be necessary depending on what you are doing
-
-    let number = (Math.floor(Math.random() * 25));
     
-    const endpoint = `https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=25`;
+    const endpoint = `https://quotes.stormconsultancy.co.uk/random.json`;
     fetch(endpoint)
       .then(response => response.json())
       .then(data => {
-        // Do stuff with data and then call this.setState();
      // console.log(data);
-      const quotesData = data[number];
-      const regex = /^<p>|[</p>]/ig;
-      const regex2 = /&#8217;|&#8217;/ig;
-      const com = /&#8220;|&#8221;/ig;
-      const apos = /&#8217;/ig;
-      const cleanQuote = quotesData.content.replace(regex, '').replace(regex2,"'" ).replace(com,"\"" );
-      const cleanAuthor = quotesData.title.replace(apos, '’');
-      this.setState({ quote: cleanQuote, author: cleanAuthor });
+      this.setState({ quote: data.quote, author: data.author });
       })
       .catch(error => console.log("error is", error));
   };
