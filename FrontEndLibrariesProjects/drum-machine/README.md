@@ -11,16 +11,16 @@ I used:
 
 ## Steps to build the App
 
-###0. Make Folder Structure:
+### 0. Make Folder Structure:
 - Project
   - src
      - components
      - styles
-###1. **_npm init or npm init -y_** to skip all the questions
-###2. **_npm install webpack webpack-cli --save-dev_** to install Webpack
-###3. **_npm install react react-dom --save_** to install React
-###4. **_npm install @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev_** to install babel-core, babel-loader, babel-preset-env, babel-preset-react as a dev dependency.
-###5. **Create an index.js** file inside root of the /src folder, for now add the following line code inside it.This file will be the entry point to our app.
+### 1. **_npm init or npm init -y_** to skip all the questions
+### 2. **_npm install webpack webpack-cli --save-dev_** to install Webpack
+### 3. **_npm install react react-dom --save_** to install React
+### 4. **_npm install @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev_** to install babel-core, babel-loader, babel-preset-env, babel-preset-react as a dev dependency.
+### 5. **Create an index.js** file inside root of the /src folder, for now add the following line code inside it.This file will be the entry point to our app.
 
 `<!DOCTYPE html>
 <html lang="en">
@@ -36,7 +36,7 @@ I used:
 </body>
 </html>`
 
-###6. **Create a webpack.config.js** in root directory
+### 6. **Create a webpack.config.js** in root directory
 
 ```
 const path = require("path");
@@ -64,7 +64,7 @@ module.exports = {
   }
 };
 ```
-###7.Install css-loader and style-loader
+### 7.Install css-loader and style-loader
 
 - **babel-loader:** load JSX/JavaScript files and 
 - **css-loader:** load and bundle all of the CSS files into one file
@@ -76,7 +76,53 @@ module.exports = {
 {
   "presets": ["@babel/preset-env", "@babel/preset-react"]
 }
-
 ```
 - **preset-env:** is used to transpile the ES6/ES7/ES8 code to ES5.
 - **preset-react:** This preset is used to transpile JSX code to ES5.
+
+### 8.Compiling files with Webpack:
+Add the this inside the script object of the package.json file:
+```
+"start": "webpack --mode development --watch",
+"build": "webpack --mode production"
+```
+and using this command: **_npm start_**
+index_bundle.js file it will create under the /dist directory which will contain transpiled ES5 code from index.js file.
+
+### 9.Create **App.js** inside the components with this:
+
+```
+import React, { Component } from "react";
+
+import '../styles/App.css';
+
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <h1>My React App!</h1>
+            </div>
+        );
+    }
+}
+
+export default App;
+```
+### 9.Create **App.css** inside the styles folder with this (this file is used to make sure the css-loader and style-loader are working correctly.):
+
+```
+h1 {
+    color: #27aedb;
+    text-align: center;
+}
+```
+
+## 10.Modify the **index.js** file, with this:
+
+```
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App.js";
+
+ReactDOM.render(<App />, document.getElementById("root"));
+```
