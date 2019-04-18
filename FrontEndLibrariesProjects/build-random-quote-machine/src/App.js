@@ -35,12 +35,17 @@ class App extends Component {
   handleClick = event => {
     //event.preventDefault(); // May or may not be necessary depending on what you are doing
     
-    const endpoint = `https://quotes.stormconsultancy.co.uk/random.json`;
+    const endpoint = `https://gist.githubusercontent.com/christianvuerings/6624542/raw/379a1943f1881b3d3d4ca3e3f456df4d4608c9e7/quotes.json`;
     fetch(endpoint)
       .then(response => response.json())
       .then(data => {
-     // console.log(data);
-      this.setState({ quote: data.quote, author: data.author });
+        // Do stuff with data and then call this.setState();
+     let number = (Math.floor(Math.random() * data.quotes.length));
+      const quotesData = data.quotes[number];
+      console.log(quotesData);
+      const cleanQuote = quotesData.quote;
+      const cleanAuthor = quotesData.author;
+      this.setState({ quote: cleanQuote, author: cleanAuthor });
       })
       .catch(error => console.log("error is", error));
   };
