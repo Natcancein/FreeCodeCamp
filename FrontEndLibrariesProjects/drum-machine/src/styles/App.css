@@ -11,3 +11,23 @@ h1 {
     color: #27aedb;
     text-align: center;
 }
+
+.display{
+    max-width: 940px;
+  margin: 0 auto;
+  padding: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.drum-pad{
+   /*  height: 160px;
+    width: 160px; */
+    background-color: azure;
+    height: 80px;
+    margin: 10px 1em;
+    padding-left: 10px;
+    padding-right: 10px;
+  /*   background: lightyellow; */
+    flex: 0 1 20%;
+}
