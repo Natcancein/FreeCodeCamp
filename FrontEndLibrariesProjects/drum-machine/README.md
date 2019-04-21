@@ -6,6 +6,7 @@ I used:
 - [Webpack 4](https://webpack.js.org/)
 - [Babel](https://babeljs.io/)
 - [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
+- [Styled components](https://www.styled-components.com/)
 
 [`Link to the published project`](https://natcancein.github.io/drum-machine/)
 

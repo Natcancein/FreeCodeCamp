@@ -1,3 +1,12 @@
+.app{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    min-height: 100vh;
+}
 h1 {
     color: #27aedb;
     text-align: center;
