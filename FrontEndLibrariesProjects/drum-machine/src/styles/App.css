@@ -5,7 +5,7 @@
     padding: 0;
     margin: 0;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 h1 {
     color: #27aedb;
