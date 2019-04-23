@@ -14,8 +14,8 @@ import React from 'react'
         <div className="drum-pad" id="Q">Q
 
 */
-const Display = ({ display }) => {
-    return ( <h1 id="display">{display}</h1> );
+const Display = (props) => {
+    return ( <h1 id="display"> {props.currentSoundText}</h1> );
   
 }
 

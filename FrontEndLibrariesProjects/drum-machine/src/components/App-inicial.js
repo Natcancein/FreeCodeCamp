@@ -70,7 +70,7 @@ class App extends Component {
         };
 
         this.handleClick=this.handleClick.bind(this);
-        this.handleDisplay = this.handleDisplay.bind(this);
+        this.playSound = this.playSound.bind(this);
         
       }
     
@@ -79,14 +79,37 @@ class App extends Component {
       //console.log(this.audio);  
     }
  */
-handleClick = () => {
-  this.audio.play()
-  this.audio.currentTime = 0
-  this.props.handleDisplay(this.props.id)
-}
-   
+    handleClick = event => {
+        const value = event.currentTarget.id;
+        
+        this.setState({
+            currentSoundId: value
+          });
+          
+         
+            console.log(value);
+           this.playSound(value);
+       
+      //console.log("!esto es" + this.state.currentSoundId);
+//document.getElementById(this.state.currentSoundId).play();
 
-handleDisplay = display => this.setState({ display })
+      };
+
+    
+    playSound = (value) =>{
+       
+        let audio = document.getElementById(value).innerText;
+        console.log("!esto es el id" + audio);
+     // audio.currentTime = 0;
+     // audio.play();
+       // console.log("!esto es" + audio);
+     
+
+  //document.getElementById(current).play();
+//this.play();
+
+
+} 
 
   render() {
     
@@ -103,8 +126,7 @@ handleDisplay = display => this.setState({ display })
               key={button.name}
               drumKey={button.name}
               src={button.src}
-              ref={ref => this.audio = ref}
-              handleDisplay={this.handleDisplay}
+              ref={this.myAudio}
                 />)}
               </div>
               </Wrapper>
