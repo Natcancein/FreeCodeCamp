@@ -80,13 +80,16 @@ class App extends Component {
     }
  */
 handleClick = () => {
-  this.audio.play()
-  this.audio.currentTime = 0
-  this.props.handleDisplay(this.props.id)
+this.audio.play()
+    /* this.audio.currentTime = 0 
+  this.props.handleDisplay(this.props.id)*/
 }
    
 
-handleDisplay = display => this.setState({ display })
+handleDisplay = (currentSoundId) => {
+  this.setState({ currentSoundId })
+  console.log(currentSoundId)
+}
 
   render() {
     
@@ -103,7 +106,7 @@ handleDisplay = display => this.setState({ display })
               key={button.name}
               drumKey={button.name}
               src={button.src}
-              ref={ref => this.audio = ref}
+              ref={ref => this.audioRef = ref}
               handleDisplay={this.handleDisplay}
                 />)}
               </div>
