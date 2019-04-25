@@ -1,15 +1,15 @@
 
 import React from 'react'
 
-const Button = ({ drumKey, handleClick, handleDisplay, src, ref }) => {
+const Button = ({ image, drumKey, handleClick, handleDisplay, src, ref }) => {
   return (
     <div 
-    onClick={() => {
+    onClick={(e) => {
       handleClick();
-      handleDisplay();
+      handleDisplay(e);
       
     }}
-    className="drum-pad" id={drumKey}>
+    className="drum-pad" id={drumKey} src={image}>
       {drumKey}
       <audio 
       src={src} 
