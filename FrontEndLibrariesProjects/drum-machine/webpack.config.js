@@ -9,6 +9,13 @@ module.exports = {
   },
   module:{
       rules:[
+        {
+          test: /\.(png|jpe?g|gif|svg)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {},
+            },
           {
               test:/\.js$/,
               exclude:/node_modules/,
