@@ -14,7 +14,7 @@ const Button = ({ alt, image, drumKey, handleClick, handleDisplay, src, ref }) =
    
     alt={alt}
     >
-      {drumKey}
+
       <img  src={image} 
       height="80" width="80"/>
       <audio 

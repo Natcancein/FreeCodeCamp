@@ -4,9 +4,7 @@ import styled from 'styled-components';
 import Display from './Display';
 import Button from './Button';
 import dataDrum from './dataDrum';
-//import Q from '../assets/imgSvg/Q.svg'
-//import Q from './../assets/imgPng/Q.png'
-import Qp from './../../assets/imgPng/Qp.png'
+
 // Wrapper with styled component 
 
 const Wrapper = styled.section`
@@ -37,8 +35,10 @@ handleClick = () => {
 handleDisplay = event => {
         const value = event.currentTarget.id;
         this.setState({
-            currentSoundId: `This sound now: ${ value}`
+            currentSoundId: `This sound now: ${value}`
           });
+
+          console.log(value);
         }
 
 
