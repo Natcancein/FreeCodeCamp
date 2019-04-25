@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-const Button = ({ image, drumKey, handleClick, handleDisplay, src, ref }) => {
+const Button = ({ alt, image, drumKey, handleClick, handleDisplay, src, ref }) => {
   return (
     <div 
     onClick={(e) => {
@@ -9,8 +9,14 @@ const Button = ({ image, drumKey, handleClick, handleDisplay, src, ref }) => {
       handleDisplay(e);
       
     }}
-    className="drum-pad" id={drumKey} src={image}>
+    className="drum-pad" 
+    // id={drumKey} 
+   
+    alt={alt}
+    >
       {drumKey}
+      <img  src={image} 
+      height="80" width="80"/>
       <audio 
       src={src} 
       className="clip"
@@ -18,6 +24,7 @@ const Button = ({ image, drumKey, handleClick, handleDisplay, src, ref }) => {
       type="audio/mp3"
       ref ={ref}
       >
+    
       </audio>
     </div>
   );
