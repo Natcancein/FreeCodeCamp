@@ -4,8 +4,9 @@ import styled from 'styled-components';
 import Display from './Display';
 import Button from './Button';
 import dataDrum from './dataDrum';
-import Q from '../assets/imgSvg/Q.svg'
-//import Q from '../assets/imgPng/Q.png'
+//import Q from '../assets/imgSvg/Q.svg'
+//import Q from './../assets/imgPng/Q.png'
+import Q from './../assets/imgPng/Q.png'
 // Wrapper with styled component 
 
 const Wrapper = styled.section`
@@ -56,11 +57,14 @@ handleDisplay = event => {
               key={button.name}
               drumKey={button.name}
               src={button.src}
-              image={button.img}
+          //image={button.img}
               // en ref  creo que esta el error pero me la ganó XP
               ref={ref => this.audio = ref}
                 />)}
               </div>
+
+              <img src={require('./../assets/imgPng/Q.png')} alt="Smiley face" height="42" width="42" />
+
               </Wrapper>
             </div>
           );

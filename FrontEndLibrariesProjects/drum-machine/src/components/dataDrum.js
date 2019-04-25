@@ -3,7 +3,7 @@ const dataDrum = [
         name: "Q",
         key: "Q",
         src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3",
-        img: "../assets/imgSvg/Q.svg"
+        img: "../assets/imgPng/Q.png"
     },
     {
         name: "W",
