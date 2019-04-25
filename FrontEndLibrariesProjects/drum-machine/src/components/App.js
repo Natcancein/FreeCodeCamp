@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Display from './Display';
 import Button from './Button';
 import dataDrum from './dataDrum';
-//import Q from '../assets/imgSvg/Q.svg'
+import Q from '../assets/imgSvg/Q.svg'
 //import Q from '../assets/imgPng/Q.png'
 // Wrapper with styled component 
 
@@ -40,10 +40,6 @@ handleDisplay = event => {
           });
         }
 
-this.audio.play()
-    /* this.audio.currentTime = 0 
-  this.props.handleDisplay(this.props.id)*/
-}
 
   render() {
     
@@ -60,14 +56,9 @@ this.audio.play()
               key={button.name}
               drumKey={button.name}
               src={button.src}
-<<<<<<< HEAD
               image={button.img}
               // en ref  creo que esta el error pero me la ganó XP
               ref={ref => this.audio = ref}
-=======
-              ref={ref => this.audioRef = ref}
-              handleDisplay={this.handleDisplay}
->>>>>>> 611d17b9ba83a50ed5f5877a9a246b9bd8723570
                 />)}
               </div>
               </Wrapper>
