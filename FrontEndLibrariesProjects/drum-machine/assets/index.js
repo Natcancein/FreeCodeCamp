@@ -1,13 +1,3 @@
-export Qp from './imgPng/Q.png';
-export Wp from './imgPng/W.png';
-export Ep from './imgPng/E.png';
-export Ap from './imgPng/A.png';
-export Sp from './imgPng/S.png';
-export Dp from './imgPng/D.png';
-export Zp from './imgPng/Z.png';
-export Xp from './imgPng/X.png';
-export Cp from './imgPng/C.png';
-
 export Q from './imgSvg/Q.svg';
 export W from './imgSvg/W.svg';
 export E from './imgSvg/E.svg';

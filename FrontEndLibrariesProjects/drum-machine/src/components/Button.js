@@ -10,13 +10,13 @@ const Button = ({ alt, image, drumKey, handleClick, handleDisplay, src, ref }) =
       
     }}
     className="drum-pad" 
-    // id={drumKey} 
+    id={drumKey} 
    
     alt={alt}
     >
 
       <img  src={image} 
-      height="80" width="80"/>
+      height="120" width="120"/>
       <audio 
       src={src} 
       className="clip"
