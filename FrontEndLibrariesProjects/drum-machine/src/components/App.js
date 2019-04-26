@@ -37,10 +37,7 @@ handleDisplay = event => {
         this.setState({
             currentSoundId: `This sound now: ${value}`
           });
-
-          console.log(value);
         }
-
 
   render() {
     
@@ -63,7 +60,6 @@ handleDisplay = event => {
               ref={ref => this.audio = ref}
                 />)}
               </div>
-              {/* <img src={require('./../../assets/imgPng/Qp.png')} alt="Smiley face" height="42" width="42" /> */}
               </Wrapper>
             </div>
           );

@@ -21,14 +21,47 @@ h1 {
     justify-content: center;
 }
 .drum-pad{
-   /*  height: 160px;
-    width: 160px; 
-    background-color: azure;*/
+
     height: 120px;
     width: 120px;
     margin: 10px 1em;
     padding-left: 10px;
     padding-right: 10px;
-  /*   background: lightyellow; */
     flex: 0 1 20%;
+    
+}
+
+.drum-pad:hover{
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.drum-pad img{
+  -moz-box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
