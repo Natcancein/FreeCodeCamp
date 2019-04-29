@@ -15,3 +15,5 @@
 ## Build a Drum Machine
 
 [`Link to Markdown previewer using React (development)`](https://github.com/Natcancein/FreeCodeCamp/tree/master/FrontEndLibrariesProjects/drum-machine)
+
+[`Link to Drum Machine using React (published)`](https://natcancein.github.io/drum-machine/)
