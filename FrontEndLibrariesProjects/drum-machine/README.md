@@ -7,6 +7,8 @@ I used:
 - [Babel](https://babeljs.io/)
 - [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
 - [Styled components](https://www.styled-components.com/)
+- [File Loader](https://github.com/webpack-contrib/file-loader)
+- [Image Webpack Loader](https://www.npmjs.com/package/image-webpack-loader)
 
 [`Link to the published project`](https://natcancein.github.io/drum-machine/)
 
