@@ -92,10 +92,43 @@ If you want to dispatch several actions, you must do it here.
 ```
 
 9. Create the components and connecting.
+``` javascript
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import { calcAddNumber } from '../actions/calcActions';
 
+class CalcButton extends Component {
+  render(){
+    return (
+      <div onClick={()=>{this.props.addNumberToDisplay(this.props.calcNumber)}} style={{display:'inline-block', minWidth: 20, minHeight:20, backgroundColor:'aqua'}}>
+        <p>{this.props.calcNumber}</p>
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = state =>({
+  ...state
+});
+
+const mapActionsToProps = dispatch => ({
+  addNumberToDisplay : calcAddNumber(dispatch)
+})
+```
 *What does __react-redux’s connect__ do? it connects a React component with the Redux store.You will use connect with two or three arguments depending on the use case:*
 
 - __mapStateToProps__: connects a part of the Redux state to the props of a React component. By doing so a connected React component will have access to the exact part of the store it needs.
 - __mapDispatchToProps__:  connects Redux actions to React props. This way a connected React component will be able to dispatch actions.
 
+Finally you have to :
+``` javascript
+export default connect(
+  mapStateToProps,
+  mapActionToProps
+)(CalcButton);
+```
 9. Create reducers for this app
+
+10. Combine Reducers (Folder: reducers/index.js)
+
+```import { combineReducers } from 'redux';```
