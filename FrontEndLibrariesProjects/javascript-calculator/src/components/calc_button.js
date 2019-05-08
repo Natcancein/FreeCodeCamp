@@ -5,7 +5,7 @@ import { calcAddNumber } from '../actions/calcActions';
 class CalcButton extends Component {
   render(){
     return (
-      <div onClick={()=>{this.props.addNumberToDisplay(this.props.calcNumber)}} style={{display:'inline-block', minWidth: 20, minHeight:20, backgroundColor:'aqua'}}>
+      <div id={this.props.id} onClick={()=>{this.props.addNumberToDisplay(this.props.calcNumber)}} style={{display:'inline-block', minWidth: 20, minHeight:20, backgroundColor:'aqua'}}>
         <p>{this.props.calcNumber}</p>
       </div>
     );

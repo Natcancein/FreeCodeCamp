@@ -8,22 +8,22 @@ import CalcDisplay from './components/calc_display';
 function App() {
   return (
     <div className="App">
-      <CalcButton calcNumber={9}></CalcButton>
-      <CalcButton calcNumber={8}></CalcButton>
-      <CalcButton calcNumber={7}></CalcButton>
-      <CalcButton calcNumber={6}></CalcButton>
-      <CalcButton calcNumber={5}></CalcButton>
-      <CalcButton calcNumber={4}></CalcButton>
-      <CalcButton calcNumber={3}></CalcButton>
-      <CalcButton calcNumber={2}></CalcButton>
-      <CalcButton calcNumber={1}></CalcButton>
-      <CalcButton calcNumber={0}></CalcButton>
-      <CalcOperation calcOp={'+'}></CalcOperation>
-      <CalcOperation calcOp={'-'}></CalcOperation>
-      <CalcOperation calcOp={'/'}></CalcOperation>
-      <CalcOperation calcOp={'*'}></CalcOperation>
-      <CalcOperation calcOp={'='}></CalcOperation>
-      <CalcDisplay></CalcDisplay>
+      <CalcButton id={"nine"} calcNumber={9}></CalcButton>
+      <CalcButton id={"eight"} calcNumber={8}></CalcButton>
+      <CalcButton id={"seven"} calcNumber={7}></CalcButton>
+      <CalcButton id={"six"} calcNumber={6}></CalcButton>
+      <CalcButton id={"five"} calcNumber={5}></CalcButton>
+      <CalcButton id={"four"} calcNumber={4}></CalcButton>
+      <CalcButton id={"three"} calcNumber={3}></CalcButton>
+      <CalcButton id={"two"} calcNumber={2}></CalcButton>
+      <CalcButton id={"one"} calcNumber={1}></CalcButton>
+      <CalcButton id={"zero"} calcNumber={0}></CalcButton>
+      <CalcOperation id={"add"} calcOp={'+'}></CalcOperation>
+      <CalcOperation id={"subtract"} calcOp={'-'}></CalcOperation>
+      <CalcOperation id={"divide"} calcOp={'/'}></CalcOperation>
+      <CalcOperation id={"multiply"} calcOp={'*'}></CalcOperation>
+      <CalcOperation id={"equals"} calcOp={'='}></CalcOperation>
+      <CalcDisplay id={"display"}></CalcDisplay>
     </div>
   );
 }
