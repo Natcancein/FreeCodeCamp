@@ -17,7 +17,7 @@ const styles = theme => ({
   },
   button: {
     marginLeft:"3%",
-    marginTop:"-7%",
+    marginTop:"-4%",
     padding: theme.spacing.unit * 2,
     width:"93%",
     
@@ -38,7 +38,7 @@ function App(props) {
       <Grid container spacing={24}>
      
         <Grid item xs={12}>
-          <Paper className={classes.paper}></Paper>
+        <CalcDisplay id={"display"}></CalcDisplay>
         </Grid>
         <Grid item xs={9} >
            <Button pt={-80} variant="contained" className={classes.button} >
@@ -93,6 +93,28 @@ function App(props) {
       </Button>
         </Grid>
 
+        <Grid item xs={3}>
+        <Button variant="contained" className={classes.button}>
+        <CalcButton id={"one"} calcNumber={1}></CalcButton>
+      </Button>
+        </Grid>
+        <Grid item xs={3}>
+        <Button variant="contained" className={classes.button}>
+        <CalcButton id={"two"} calcNumber={2}></CalcButton>
+      </Button>
+        </Grid>
+        <Grid item xs={3}>
+        <Button variant="contained" className={classes.button}>
+        <CalcButton id={"three"} calcNumber={3}></CalcButton>
+      </Button>
+        </Grid>
+        <Grid item xs={3}>
+        <Button variant="contained" className={classes.button}>
+        <CalcOperation id={"add"} calcOp={'+'}></CalcOperation>
+      </Button>
+        </Grid>
+
+
       </Grid> </Paper>
     </div>
   );
@@ -121,15 +143,15 @@ function App(props) {
  
 
     
-      <CalcButton id={"three"} calcNumber={3}></CalcButton>
-      <CalcButton id={"two"} calcNumber={2}></CalcButton>
-      <CalcButton id={"one"} calcNumber={1}></CalcButton>
+    
+   
+ 
       <CalcButton id={"zero"} calcNumber={0}></CalcButton>
-      <CalcOperation id={"add"} calcOp={'+'}></CalcOperation>
+    
 
     
       <CalcOperation id={"equals"} calcOp={'='}></CalcOperation>
-      <CalcDisplay id={"display"}></CalcDisplay>
+
       </Paper>
       </Grid>
     </div>
