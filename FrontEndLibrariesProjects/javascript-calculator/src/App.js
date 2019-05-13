@@ -3,6 +3,7 @@ import './App.css';
 import CalcButton from './components/calc_button';
 import CalcOperation from './components/calc_operation';
 import CalcDisplay from './components/calc_display';
+
 // Material UI
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -13,18 +14,20 @@ import Grid from '@material-ui/core/Grid';
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    spacing: 0,
+    width:"400px",
+    fontSize:"24px",
+    lineHeight:"0.8",
+    padding:"50px",
   },
   button: {
     marginLeft:"3%",
     marginTop:"-4%",
-    padding: theme.spacing.unit * 2,
+    padding: "0px",
     width:"93%",
     
     
   },
   paper: {
-    padding: theme.spacing.unit * 2,
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
@@ -34,19 +37,19 @@ function App(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-     <Paper spacing={16}>
-      <Grid container spacing={24}>
+     <Paper spacing={32} style={{ padding: 20 }}>
+      <Grid container spacing={16}>
      
         <Grid item xs={12}>
-        <CalcDisplay id={"display"}></CalcDisplay>
+        <CalcDisplay className='screen' id={"display"}></CalcDisplay>
         </Grid>
         <Grid item xs={9} >
-           <Button pt={-80} variant="contained" className={classes.button} >
-        Clear
+           <Button style={{ marginLeft: "2px",marginTop:"0px" }} variant="contained" className={classes.button} >
+           <CalcOperation id="clear" calcOp={'clear'}></CalcOperation>
       </Button>
         </Grid>
         <Grid item xs={3}>
-        <Button variant="contained" className={classes.button} >
+        <Button style={{marginTop:"0px" }}  variant="contained" className={classes.button} >
         <CalcOperation id={"divide"} calcOp={'/'}></CalcOperation>
       </Button>
         </Grid>
@@ -114,48 +117,26 @@ function App(props) {
       </Button>
         </Grid>
 
+        <Grid item xs={6}>
+        <Button variant="contained" className={classes.button}>
+        <CalcButton id={"zero"} calcNumber={0}></CalcButton>
+      </Button>
+        </Grid>
+        <Grid item xs={3}>
+        <Button variant="contained" className={classes.button}>
+        <CalcButton calcNumber={'.'}></CalcButton>
+      </Button>
+        </Grid>
+        <Grid item xs={3}>
+        <Button variant="contained" className={classes.button}>
+        <CalcOperation id={"equals"} calcOp={'='}></CalcOperation>
+      </Button>
+        </Grid>
 
       </Grid> </Paper>
     </div>
   );
- /*  return (
-    <div  className={classes.root}>
-     <Grid container spacing={24}>
-     <Paper className={classes.paper}>
-     
-     <Grid item xs={6} sm={3}>
-     
-      </Grid>
-      <Grid item xs={6} sm={3}>
-     
-      </Grid>
-      <Grid item xs={6} sm={3}>
-     
-      </Grid>
-      <Grid item xs={6} sm={3}>
-     <Button variant="contained" className={classes.button}>
-  
-      </Button>
-      </Grid>
-      
-   
-      
- 
 
-    
-    
-   
- 
-      <CalcButton id={"zero"} calcNumber={0}></CalcButton>
-    
-
-    
-      <CalcOperation id={"equals"} calcOp={'='}></CalcOperation>
-
-      </Paper>
-      </Grid>
-    </div>
-  ); */
 }
 
 App.propTypes = {

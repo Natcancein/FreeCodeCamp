@@ -8,7 +8,23 @@ body{
 
 .App {
   text-align: center;
+
 }
+
+p{
+  font-size: 24px;
+  line-height: 0.8;
+}
+
+.screen{
+  display:block;
+  background-color:black;
+  min-height:40;
+  padding:5px;
+ color: white;
+}
+
+
 
 /* 
 .App-logo {

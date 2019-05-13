@@ -5,7 +5,7 @@ import { calcOperation, calcAddSign } from '../actions/calcActions';
 class CalcOperation extends Component {
   render(){
     return (
-      <div id={this.props.id} onClick={()=>{this.props.doOperation(this.props.calcOp);this.props.addSignToDisplay(this.props.calcOp)}} style={{display:'inline-block', minWidth: 20, minHeight:20, backgroundColor:'red'}}>
+      <div id={this.props.id} onClick={()=>{this.props.doOperation(this.props.calcOp);}} style={{display:'inline-block', minWidth: 20, minHeight:20, backgroundColor:'red'}}>
         <p>{this.props.calcOp}</p>
       </div>
     );

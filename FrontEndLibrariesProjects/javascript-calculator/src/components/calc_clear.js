@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { calcAddNumber } from '../actions/calcActions';
+import { calcClear } from '../actions/calcActions';
 
-class CalcButton extends Component {
+class CalcClear extends Component {
   render(){
     return (
       <div id={this.props.id} onClick={()=>{this.props.addNumberToDisplay(this.props.calcNumber)}}>
-        <p>{this.props.calcNumber}</p>
+        <p>{this.props.calcClear}</p>
       </div>
     );
   }
@@ -17,10 +17,10 @@ const mapStateToProps = state =>({
 });
 
 const mapActionsToProps = dispatch => ({
-  addNumberToDisplay : calcAddNumber(dispatch)
+  addNumberToDisplay : calcClear(dispatch)
 })
 
 export default connect(
   mapStateToProps,
   mapActionsToProps
-)(CalcButton);
+)(CalcClear);

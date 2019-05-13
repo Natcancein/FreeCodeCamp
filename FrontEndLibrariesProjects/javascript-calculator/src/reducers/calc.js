@@ -1,4 +1,4 @@
-import { ADD_NUMBER, ADD_SIGN, DO_OPERATION } from "../actions/actionTypes";
+import { ADD_NUMBER, DO_OPERATION } from "../actions/actionTypes";
 
 export default (
   state = {
@@ -8,7 +8,7 @@ export default (
   }, action)=>{
     switch(action.type){
       case ADD_NUMBER: 
-        if(state.display === '0'){
+        if(state.display == '0'){
           return {
             ...state,
             display : action.payload.digit
@@ -19,8 +19,6 @@ export default (
             display : state.display + "" + action.payload.digit
           }
         }
-        
-       
       case DO_OPERATION:
         if(state.previousNumber != null && state.currentOperation != null){
           let calcResult = 0;
@@ -32,7 +30,7 @@ export default (
             default: calcResult = state.previousNumber + parseInt(state.display);break;
           }
 
-          if(action.payload.operation === '='){
+          if(action.payload.operation == '='){
             return {
               currentOperation: null,
               previousNumber: null,
@@ -52,17 +50,6 @@ export default (
             display: '0'
           }
         }
-
-        case ADD_SIGN: 
-        if(action.payload.digitSign === '='){
-         return state;
-        }else{
-          return {
-            ...state,
-            display : action.payload.digitSign
-          }
-        }
- 
       default: return state;
     }
 };
