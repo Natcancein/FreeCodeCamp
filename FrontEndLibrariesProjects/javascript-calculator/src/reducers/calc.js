@@ -1,11 +1,13 @@
 import { ADD_NUMBER, DO_OPERATION } from "../actions/actionTypes";
 
-export default (
-  state = {
-    previousNumber: null,
+const defaultState = {
+previousNumber: null,
     currentOperation: null,
     display: '0'
-  }, action)=>{
+};
+
+export default (
+  state = {defaultState}, action)=>{
     switch(action.type){
       case ADD_NUMBER: 
         if(state.display == '0'){
@@ -16,25 +18,29 @@ export default (
         }else{
           return {
             ...state,
-            display : state.display + "" + action.payload.digit
+            display : state.display + ""+action.payload.digit
           }
         }
       case DO_OPERATION:
-        if(state.previousNumber != null && state.currentOperation != null){
+        let parsePreviousNumber= parseFloat(state.previousNumber);
+        if(parsePreviousNumber != null && state.currentOperation != null){
           let calcResult = 0;
           switch(state.currentOperation){
-            case '+': calcResult = state.previousNumber + parseInt(state.display);break;
-            case '-': calcResult = state.previousNumber - parseInt(state.display);break;
-            case '*': calcResult = state.previousNumber * parseInt(state.display);break;
-            case '/': calcResult = state.previousNumber / parseInt(state.display);break;
-            default: calcResult = state.previousNumber + parseInt(state.display);break;
+            case '+': calcResult = parsePreviousNumber + parseFloat(state.display);break;
+            case '-': calcResult = parsePreviousNumber - parseFloat(state.display);break;
+            case '*': calcResult = parsePreviousNumber * parseFloat(state.display);break;
+            case '/': calcResult = parsePreviousNumber / parseFloat(state.display);break;
+            case 'clear':
+            return state;
+             break;
+            default: calcResult = state.previousNumber + parseFloat(state.display);break;
           }
 
-          if(action.payload.operation == '='){
+          if(action.payload.operation === '='){
             return {
               currentOperation: null,
               previousNumber: null,
-              display: calcResult
+              display: parseFloat(calcResult)
             }
           }else{
             return {
@@ -45,7 +51,7 @@ export default (
           }
         }else{
           return {
-            previousNumber: parseInt(state.display),
+            previousNumber: parseFloat(state.display),
             currentOperation: action.payload.operation,
             display: '0'
           }

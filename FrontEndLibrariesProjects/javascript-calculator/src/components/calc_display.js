@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 
 class CalcDisplay extends Component{
   render(){
-    return (<div id={this.props.id}>
+    return (
+    <div 
+    className='screen' 
+    id={this.props.id}>
       <p>{this.props.calc.display}</p>
     </div>)
   }
