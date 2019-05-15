@@ -11,16 +11,16 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 
-//import ParentForm from "./components/StyledForm"
-
-/* import styled, { keyframes } from 'styled-components';
+import ParentForm from "./components/StyledForm"
+/* 
+import styled, { keyframes } from 'styled-components';
 import { bounce } from 'react-animations';
 
 const bounceAnimation = keyframes`${bounce}`;
 
 const BouncyDiv = styled.div`
   animation: 1s ${bounceAnimation};
-`; */
+`;  */
 
 const styles = theme => ({
   root: {
@@ -45,7 +45,7 @@ const styles = theme => ({
 function App(props) {
   const { classes } = props;
   return (
-    // <BouncyDiv> 
+     <ParentForm> 
     <div className={classes.root}>
       <Paper spacing={32} style={{ padding: 20 }}>
         <Grid container spacing={16}>
@@ -150,7 +150,7 @@ function App(props) {
         </Grid>{" "}
       </Paper>
     </div>
-    // </BouncyDiv>
+     </ ParentForm>
   );
 }
 

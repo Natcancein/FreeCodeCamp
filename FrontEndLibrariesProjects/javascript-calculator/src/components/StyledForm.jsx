@@ -1,19 +1,14 @@
-import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { bounce } from 'react-animations/lib/react-animations';
-
+import { fadeInDown } from 'react-animations';
 
  //now below style a parent div as a variable and name it 
  //Note: always use Pascal Case for Naming Styled Components
  //we use styled.variableType to create a variable 
 
- const bounceAnimation = keyframes`${bounce}`;
-
+ const bounceAnimation = keyframes`${fadeInDown}`;
 
 const ParentForm = styled.div`
   animation: 1s ${bounceAnimation};
 `;
 
-// don't export default anything from styled components file
-
-export {ParentForm}
+export default ParentForm
