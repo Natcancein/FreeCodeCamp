@@ -18,7 +18,7 @@ export default (
        
 
       case ADD_NUMBER: 
-        if(state.display == '0'){
+        if(state.display === '0' && action.payload.digit !=="."){
           return {
             ...state,
             display : action.payload.digit
@@ -32,16 +32,16 @@ export default (
       case DO_OPERATION:
         if(state.previousNumber != null && state.currentOperation != null){
           let calcResult = 0;
+          let floatNumber =  parseFloat(state.display);
           switch(state.currentOperation){
-            case '+': calcResult = state.previousNumber + parseInt(state.display);break;
-            case '-': calcResult = state.previousNumber - parseInt(state.display);break;
-            case '*': calcResult = state.previousNumber * parseInt(state.display);break;
-            case '/': calcResult = state.previousNumber / parseInt(state.display);break;
-             break;
-            default: calcResult = state.previousNumber + parseInt(state.display);break;
+            case '+': calcResult = state.previousNumber + floatNumber;break;
+            case '-': calcResult = state.previousNumber - floatNumber;break;
+            case '*': calcResult = state.previousNumber * floatNumber;break;
+            case '/': calcResult = state.previousNumber / floatNumber;break;
+            default: calcResult = state.previousNumber + floatNumber;break;
           }
 
-          if(action.payload.operation == '='){
+          if(action.payload.operation === '='){
             return {
               currentOperation: null,
               previousNumber: null,
@@ -57,7 +57,7 @@ export default (
           
         }else{
           return {
-            previousNumber: parseInt(state.display),
+            previousNumber: parseFloat(state.display),
             currentOperation: action.payload.operation,
             display: '0'
           }
