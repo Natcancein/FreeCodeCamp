@@ -1,22 +1,14 @@
-import { ADD_NUMBER, DO_OPERATION, DO_CLEAR } from "../actions/actionTypes";
+import { ADD_NUMBER, DO_OPERATION } from "../actions/actionTypes";
+
+const defaultState = {
+previousNumber: null,
+    currentOperation: null,
+    display: '0'
+};
 
 export default (
-  state = {
-    previousNumber: null,
-    currentOperation: null,
-    display: '0'
-  }, action)=>{
+  state = {defaultState}, action)=>{
     switch(action.type){
-      case DO_CLEAR: 
-      
-          return {
-            ...state,
-            previousNumber: null,
-    currentOperation: null,
-    display: '0'
-          }
-       
-
       case ADD_NUMBER: 
         if(state.display == '0'){
           return {
@@ -26,22 +18,25 @@ export default (
         }else{
           return {
             ...state,
-            display : state.display + "" + action.payload.digit
+            display : state.display + ""+action.payload.digit
           }
         }
       case DO_OPERATION:
+        let parsePreviousNumber= parseFloat(state.previousNumber);
         if(state.previousNumber != null && state.currentOperation != null){
           let calcResult = 0;
           switch(state.currentOperation){
-            case '+': calcResult = state.previousNumber + parseInt(state.display);break;
-            case '-': calcResult = state.previousNumber - parseInt(state.display);break;
-            case '*': calcResult = state.previousNumber * parseInt(state.display);break;
-            case '/': calcResult = state.previousNumber / parseInt(state.display);break;
+            case '+': calcResult = parsePreviousNumber + state.display;break;
+            case '-': calcResult = parsePreviousNumber - state.display;break;
+            case '*': calcResult = parsePreviousNumber * state.display;break;
+            case '/': calcResult = parsePreviousNumber / state.display;break;
+            case 'clear':
+            return defaultState;
              break;
-            default: calcResult = state.previousNumber + parseInt(state.display);break;
+            default: calcResult = state.previousNumber + state.display;break;
           }
 
-          if(action.payload.operation == '='){
+          if(action.payload.operation === '='){
             return {
               currentOperation: null,
               previousNumber: null,
@@ -54,10 +49,9 @@ export default (
               display: '0'
             }
           }
-          
         }else{
           return {
-            previousNumber: parseInt(state.display),
+            previousNumber: state.display,
             currentOperation: action.payload.operation,
             display: '0'
           }

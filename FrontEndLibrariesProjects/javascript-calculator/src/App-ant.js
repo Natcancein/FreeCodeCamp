@@ -3,7 +3,6 @@ import "./App.css";
 import CalcButton from "./components/calc_button";
 import CalcOperation from "./components/calc_operation";
 import CalcDisplay from "./components/calc_display";
-import CalcClear from "./components/calc_clear";
 
 // Material UI
 import PropTypes from "prop-types";
@@ -16,7 +15,6 @@ import ParentForm from "./components/StyledForm"
 /* 
 import styled, { keyframes } from 'styled-components';
 import { bounce } from 'react-animations';
-import { calcClear } from './actions/calcActions';
 
 const bounceAnimation = keyframes`${bounce}`;
 
@@ -59,7 +57,7 @@ function App(props) {
               style={{ marginLeft: "2px", marginTop: "0px" }}
               variant="contained"
               className={classes.button}>
-              <CalcClear id="clear" calcClear={"clear"} />
+              <CalcOperation id="clear" calcOp={"clear"} />
             </Button>
           </Grid>
           <Grid item xs={3}>

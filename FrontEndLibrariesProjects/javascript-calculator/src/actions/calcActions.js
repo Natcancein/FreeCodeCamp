@@ -1,4 +1,4 @@
-import { ADD_NUMBER, DO_OPERATION } from "./actionTypes";
+import { ADD_NUMBER, DO_OPERATION, DO_CLEAR } from "./actionTypes";
 
 export const calcAddNumber = dispatch => newDigit => {
   dispatch({
@@ -14,6 +14,15 @@ export const calcOperation = dispatch => operation => {
     type: DO_OPERATION,
     payload: {
       operation: operation
+    }
+  })
+}
+
+export const calcClear = dispatch => clear => {
+  dispatch({
+    type: DO_CLEAR,
+    payload: {
+      clear: clear
     }
   })
 }
