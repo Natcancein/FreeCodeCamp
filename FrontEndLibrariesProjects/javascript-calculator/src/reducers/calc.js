@@ -56,10 +56,14 @@ export default (
           }
           
         }else{
+        let decimalNumber= parseFloat(state.display);
+         /* let decimalNumberLength = decimalNumber.length;
+         let displayOperation = decimalNumber.slice(0, decimalNumberLength);
+          */
           return {
-            previousNumber: parseFloat(state.display),
+            previousNumber: decimalNumber,
             currentOperation: action.payload.operation,
-            display: '0'
+            display: "" 
           }
         }
       default: return state;
